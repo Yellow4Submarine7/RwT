@@ -1,0 +1,27 @@
+# config.py
+
+class TrainingConfig:
+    policy_model_name = "gpt-3.5-turbo"
+    rollout_model_name = "meta-llama/Llama-2-7b-hf"
+    critical_model_name = 'all-MiniLM-L6-v2'
+    kg_file = "path/to/knowledge_graph.txt"
+    train_file = "path/to/train_data.json"
+    num_epochs = 10
+    num_simulations = 100
+    rollout_epochs = 5
+    rollout_lr = 1e-5
+    lambda_param = 0.5
+    mu_param = 0.1
+    rollout_model_save_path = "path/to/save/rollout_model.pth"
+    critical_model_save_path = "path/to/save/critical_model.pth"
+
+class InferenceConfig:
+    policy_model_name = "gpt-3.5-turbo"
+    rollout_model_name = "meta-llama/Llama-2-7b-hf"
+    critical_model_name = 'all-MiniLM-L6-v2'
+    rollout_model_path = "path/to/saved/rollout_model.pth"
+    kg_file = "path/to/knowledge_graph.txt"
+    test_file = "path/to/test_data.json"
+    num_simulations = 100
+    lambda_param = 0.5
+    mu_param = 0.1
